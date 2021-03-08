@@ -10,14 +10,10 @@ const SiteHeader = () => {
     const user = useUser();
     const firebaseuser = useFirebaseApp();
 
-
-
-
     const handleClick = () => {
         firebaseuser.auth().signOut();
         alert("You have successfully signed out")
         window.location.replace("./");
-
     }
 
     return (

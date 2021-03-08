@@ -9,6 +9,7 @@ const LoginPage = lazy(() => import("./components/authorization/login"))
 const Signup = lazy(() => import("./components/authorization/signUp"))
 const SiteHeader = lazy(() => import("./components/Header"))
 const UserInfo = lazy(() => import("./pages/UserInfo"))
+const Home = lazy(() => import("./pages/Home"))
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                 <SiteHeader />
                 <div className="container-fluid">
                     <Switch>
+                        <Route path='/home' component={Home} />
                         <Route path='/signup' component={Signup} />
                         <Route path='/userinfo' component={UserInfo} />
                         <Route path="/" component={LoginPage} />
