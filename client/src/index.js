@@ -7,6 +7,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 const LoginPage = lazy(() => import("./components/authorization/login"))
 const Signup = lazy(() => import("./components/authorization/signUp"))
+const Check = lazy(() => import("./components/authorization/Check"))
 const SiteHeader = lazy(() => import("./components/Header"))
 const UserInfo = lazy(() => import("./pages/UserInfo"))
 const Home = lazy(() => import("./pages/Home"))
@@ -19,6 +20,7 @@ const App = () => {
                 <div className="container-fluid">
                     <Switch>
                         <Route path='/home' component={Home} />
+                        <Route path='/check' component={Check} />
                         <Route path='/signup' component={Signup} />
                         <Route path='/userinfo' component={UserInfo} />
                         <Route path="/" component={LoginPage} />
