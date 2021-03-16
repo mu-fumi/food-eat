@@ -18,11 +18,23 @@ const SiteHeader = () => {
     return (
 
         <nav className="navbar  navbar-light fixed-top  bg-dark ">
-            <nav className="navbar-brand text-white"  >
-                <Link className=" text-white" to="/">
-                    Home
-                </Link>
-            </nav>
+            <ul className="navbar-brand text-white clearfix"  >
+                <li className="nav-item li-no-style">
+                    <Link className=" text-white" to="/">
+                        Home
+                    </Link>
+                </li>
+                <li className="nav-item li-no-style">
+                    <Link className=" text-white" to="/rests">
+                        Restaurant lists
+                    </Link>
+                </li>
+                <li className="nav-item li-no-style">
+                    <Link className=" text-white" to="/postRest">
+                        Add Restaurant
+                    </Link>
+                </li>
+            </ul>
 
             <nav className="navbar navbar-expand ">
                 <ul className="navbar-nav">

@@ -46,7 +46,7 @@ const Login = () => {
                         role: user.role
                     }
                     localStorage.setItem('user', JSON.stringify(final))
-                    window.location.href = "/home"
+                    window.location.href = "/"
                 } else {
                     seterror(res.msg)
                 }

@@ -11,19 +11,24 @@ const Check = lazy(() => import("./components/authorization/Check"))
 const SiteHeader = lazy(() => import("./components/Header"))
 const UserInfo = lazy(() => import("./pages/UserInfo"))
 const Home = lazy(() => import("./pages/Home"))
+const RestList = lazy(() => import("./pages/RestList"))
+const AddRest = lazy(() => import("./pages/AddRest"))
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className="jumbotron">
                 <SiteHeader />
-                <div className="container-fluid">
+                <div className="container">
                     <Switch>
-                        <Route path='/home' component={Home} />
+                        <Route path="/login" component={LoginPage} />
                         <Route path='/check' component={Check} />
                         <Route path='/signup' component={Signup} />
                         <Route path='/userinfo' component={UserInfo} />
-                        <Route path="/" component={LoginPage} />
+
+                        <Route path='/rests' component={RestList} />
+                        <Route path='/postRest' component={AddRest} />
+                        <Route path='/' component={Home} />
                         <Redirect from="*" to="/" />
                     </Switch>
                 </div>
