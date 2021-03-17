@@ -1,7 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Carousel } from 'antd';
 
 export default function Home () {
+
+    const [list, setList] = useState([])
+
+
+    useEffect(() => {
+        var getList = () => {
+            fetch('/rest/all')
+                .then(res => res.json())
+                .then(res => {
+                    var Arr = res.data
+                    // .splice(5)
+                    setList(Arr)
+                })
+        }
+        getList()
+
+    }, [])
+
 
 
     function onChange (a, b, c) {
@@ -10,6 +28,7 @@ export default function Home () {
 
 
     const contentStyle = {
+        width: "100%",
         height: '460px',
         color: '#fff',
         lineHeight: '460px',
@@ -20,18 +39,13 @@ export default function Home () {
     return (
         <>
             <Carousel afterChange={onChange} >
-                <div>
-                    <h3 style={contentStyle}>1</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>2</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>3</h3>
-                </div>
-                <div>
-                    <h3 style={contentStyle}>4</h3>
-                </div>
+                {
+                    list.map((it, index) => (
+                        <div key={index}>
+                            <img style={contentStyle} src={it.imgUrl} alt="" />
+                        </div>
+                    ))
+                }
             </Carousel>
         </>
     )

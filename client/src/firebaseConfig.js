@@ -1,12 +1,11 @@
 
 var firebaseConfig = {
-  apiKey: "AIzaSyD9BN_YnM71kQImeZ2wV_Eu_ne0l6L9mg8",
-  authDomain: "fypapp-beff8.firebaseapp.com",
-  projectId: "fypapp-beff8",
-  storageBucket: "fypapp-beff8.appspot.com",
-  messagingSenderId: "950724968347",
-  appId: "1:950724968347:web:7b8a96e6475ac0b7aeab3e",
-  measurementId: "G-2Z8TJK7TWE"
+    apiKey: "AIzaSyCmYyz0dgsO4g6AQHswOsZXX_XVs5BhywM",
+    authDomain: "fypapp-a50cc.firebaseapp.com",
+    projectId: "fypapp-a50cc",
+    storageBucket: "fypapp-a50cc.appspot.com",
+    messagingSenderId: "1057550623019",
+    appId: "1:1057550623019:web:61b23a1f363a643291256e"
 };
-  
+
 export default firebaseConfig;
