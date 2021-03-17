@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card, Avatar, Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 
 export default function RestList () {
     const [list, setList] = useState([])
@@ -15,9 +16,7 @@ export default function RestList () {
         }
         getList()
     }, [])
-    // function onChange (a, b, c) {
-    //     console.log(a, b, c);
-    // }
+
 
     const contentStyle = {
         width: "100%",
@@ -34,22 +33,24 @@ export default function RestList () {
             <Row style={{ margin: '10px' }} gutter={16}>
                 {
                     list.map((it, index) => (
-                        <Col key={index} span={8}>
-                            <Card
-                                cover={
-                                    <img
-                                        alt="example"
-                                        src={it.imgUrl}
+                        <Link to="/foods">
+                            <Col key={index} span={8}>
+                                <Card
+                                    cover={
+                                        <img
+                                            alt="example"
+                                            src={it.imgUrl}
+                                        />
+                                    }
+                                >
+                                    <Card.Meta
+                                        title={it.name}
+                                        description={it.type}
                                     />
-                                }
-                            >
-                                <Card.Meta
-                                    title={it.name}
-                                    description={it.type}
-                                />
-                            </Card>
-                        </Col>
+                                </Card>
 
+                            </Col>
+                        </Link>
                     ))
                 }
             </Row>

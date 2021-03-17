@@ -1,10 +1,12 @@
+
+
+
 import React, { useState } from 'react';
 import { useStorage } from 'reactfire';
 import 'firebase/auth'
 import 'firebase/storage';
 
-
-export default function AddRest () {
+export default function AddFood() {
 
 
     const storageRef = useStorage().ref();

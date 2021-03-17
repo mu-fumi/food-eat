@@ -13,6 +13,8 @@ const UserInfo = lazy(() => import("./pages/UserInfo"))
 const Home = lazy(() => import("./pages/Home"))
 const RestList = lazy(() => import("./pages/RestList"))
 const AddRest = lazy(() => import("./pages/AddRest"))
+const Food = lazy(() => import("./pages/Food"))
+const AddFood = lazy(() => import("./pages/AddFood"))
 
 const App = () => {
     return (
@@ -28,6 +30,9 @@ const App = () => {
 
                         <Route path='/rests' component={RestList} />
                         <Route path='/postRest' component={AddRest} />
+
+                        <Route path='/foods' component={Food} />
+                        <Route path='/postFood' component={AddFood} />
                         <Route path='/' component={Home} />
                         <Redirect from="*" to="/" />
                     </Switch>
