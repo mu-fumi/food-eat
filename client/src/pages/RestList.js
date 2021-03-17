@@ -5,7 +5,6 @@ export default function RestList () {
 
     const [list, setList] = useState([])
 
-
     useEffect(() => {
         var getList = () => {
             fetch('/rest/all')
@@ -17,7 +16,6 @@ export default function RestList () {
                 })
         }
         getList()
-
     }, [])
 
 
