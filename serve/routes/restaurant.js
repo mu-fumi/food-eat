@@ -12,7 +12,6 @@ router.get('/all', function (req, res, next) {
             console.log('err -> :', err)
             res.json({ code: 200, data: doc })
         })
-
 });
 
 router.post('/add', function (req, res, next) {
@@ -56,8 +55,6 @@ router.post('/update', function (req, res, next) {
         res.send({ code: 200, msg: 'ok' })
     })
 });
-
-
 
 
 
