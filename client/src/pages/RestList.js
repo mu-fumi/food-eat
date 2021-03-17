@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Card, Avatar, Row, Col } from 'antd';
 
 export default function RestList () {
-
     const [list, setList] = useState([])
-
     useEffect(() => {
         var getList = () => {
             fetch('/rest/all')
@@ -17,13 +15,9 @@ export default function RestList () {
         }
         getList()
     }, [])
-
-
-
-    function onChange (a, b, c) {
-        console.log(a, b, c);
-    }
-
+    // function onChange (a, b, c) {
+    //     console.log(a, b, c);
+    // }
 
     const contentStyle = {
         width: "100%",
